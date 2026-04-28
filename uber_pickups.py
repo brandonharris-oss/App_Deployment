@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title("Ashraf's App: Uber pickups in NYC")
+st.title("Brandon App: Uber pickups in NYC")
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
@@ -37,5 +37,6 @@ filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
+
 
 
